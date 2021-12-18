@@ -13,7 +13,7 @@ public class n11LoginPageElements {
 
     public static Target STORE_FIELD = Target.the("store name textbox").located(By.id("nickname"));
 
-    public static Target LOGIN_BTN = Target.the("login btn").located(By.id("j_id275_j_id_dk"));
+    public static Target LOGIN_BTN = Target.the("login btn").located(By.id("registerNow"));
 
 
 

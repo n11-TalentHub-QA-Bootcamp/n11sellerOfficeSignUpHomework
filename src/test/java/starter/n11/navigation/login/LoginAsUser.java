@@ -28,26 +28,22 @@ public class LoginAsUser implements Task {
 
 
 
-
-
-
-
-    @Step("{0} Login with email '#email_text' and password '#password_text'")
+    @Step("{0} SignUp with email '#email_text' and password '#password_text'")
     @Override
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
                 Click.on(n11HomePageElements.LOGIN_LINK),
-                WaitUntil.the(n11LoginPageElements.EMAIL_FIELD,isClickable()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(n11LoginPageElements.LOGIN_BTN,isClickable()).forNoMoreThan(2).seconds(),
 
                 Click.on(n11LoginPageElements.NAME_FIELD),
-                SendKeys.of(this.password_text).into(n11LoginPageElements.NAME_FIELD),
+                SendKeys.of(this.name_text).into(n11LoginPageElements.NAME_FIELD),
 
                 Click.on(n11LoginPageElements.PASSWORD_FIELD),
                 SendKeys.of(this.password_text).into(n11LoginPageElements.PASSWORD_FIELD),
 
                 Click.on(n11LoginPageElements.REPASSWORD_FIELD),
-                SendKeys.of(this.password_text).into(n11LoginPageElements.REPASSWORD_FIELD),
+                SendKeys.of(this.repassword_text).into(n11LoginPageElements.REPASSWORD_FIELD),
 
                 Click.on(n11LoginPageElements.EMAIL_FIELD),
                 SendKeys.of(this.email_text).into(n11LoginPageElements.EMAIL_FIELD),
@@ -78,7 +74,6 @@ public class LoginAsUser implements Task {
 
 
     }
-
 
 
     public static LoginAsUser loginThePage(String email_text, String reemail_text, String password_text, String repassword_text, String name_text, String store_text) {
