@@ -27,7 +27,7 @@ public class N11LoginStepDefinitions {
 
     @When("user logged in with valid credentials")
     public void userLoggedInWithValidCredentials() {
-        actor.attemptsTo(LoginAsUser.loginThePage("serenitysdet@gmail.com","serenitysdet@gmail.com" ,"serenitysdet-1","serenitysdet-1", "ibrahim", "ibrahimKalkan"));
+        actor.attemptsTo(LoginAsUser.loginThePage("walomim175", "walomim175@pyrelle.com","walomim175@pyrelle.com" ,"123123123","123123123", "walomim175pyrelle"));
     }
 
     @Then("user logged in successfully")

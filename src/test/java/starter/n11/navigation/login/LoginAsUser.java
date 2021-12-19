@@ -63,7 +63,13 @@ public class LoginAsUser implements Task {
 
     }
 
-    public LoginAsUser(String email_text , String reemail_text, String password_text, String repassword_text , String name_text, String store_text){
+    public LoginAsUser(String email_text ,
+                       String reemail_text,
+                       String password_text,
+                       String repassword_text ,
+                       String name_text,
+                       String store_text){
+
         this.email_text = email_text;
         this.reemail_text = reemail_text;
         this.password_text = password_text;
@@ -76,9 +82,19 @@ public class LoginAsUser implements Task {
     }
 
 
-    public static LoginAsUser loginThePage(String email_text, String reemail_text, String password_text, String repassword_text, String name_text, String store_text) {
+    public static LoginAsUser loginThePage(String name_text,
+                                           String email_text,
+                                           String reemail_text,
+                                           String password_text,
+                                           String repassword_text,
+                                           String store_text) {
         return instrumented(LoginAsUser.class
-                ,email_text,reemail_text,password_text,repassword_text,name_text,store_text);
+                ,name_text
+                ,email_text
+                ,reemail_text
+                ,password_text
+                ,repassword_text
+                ,store_text);
     }
 
 }
