@@ -1,7 +1,7 @@
-Feature: Signup page
+Feature: n11 Signup
 
-  @signup
-  Scenario: n11 mark signup
+
+  Scenario: n11 signup
     Given user launch browser and open the main page
-    When user logged in with valid credentials
-    Then user logged in successfully
+    When user signed up with valid credentials
+    Then user signed up successfully
